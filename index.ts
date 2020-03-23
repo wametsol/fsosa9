@@ -1,6 +1,7 @@
 import express from 'express';
 const app = express();
 import { calculateBmi } from './bmiCalculator'
+import { exerciseCalculator } from './exerciseCalculator'
 
 app.get('/hello', (_req, res) => {
   res.send('Hello Full Stack!');
@@ -20,7 +21,14 @@ app.get('/bmi*', (req, res) => {
     }
     res.send(result)
 })
+
 app.get('/calculate', (req, res) => {
+    const { value1, value2 } = req.query
+
+    const result = exerciseCalculator(value1, value2)
+  res.send(result);
+})
+
 const PORT = 3003;
 
 app.listen(PORT, () => {
