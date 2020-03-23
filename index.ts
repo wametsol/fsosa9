@@ -20,6 +20,7 @@ app.get('/bmi*', (req, res) => {
     }
     res.send(result)
 })
+app.get('/calculate', (req, res) => {
 const PORT = 3003;
 
 app.listen(PORT, () => {
