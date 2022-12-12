@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "@types/node": "^13.9.3",
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   }
 }
